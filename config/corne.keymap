@@ -71,7 +71,7 @@
             &trans         &trans         &trans         &trans         &trans         &trans             &kp LEFT       &kp DOWN      &kp UP         &kp RIGHT      &trans         &trans
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤──────────────┤
         //|  SHFT        |              |              |              |              |              |   |  HOME        |  PAGE_DN     |  PAGE_UP     |  END         |              |              |
-            &kp LSHFT      &trans         &trans         &trans         &trans         &trans             &kp HOME       &kb PG_UP      &kb PG_UP      &kp END        &trans         &trans
+            &kp LSHFT      &trans         &trans         &trans         &trans         &trans             &kp HOME       &kp PG_UP      &kp PG_UP      &kp END        &trans         &trans
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
         //                                             |              |              |              |   |              |              |             |
                                                          &trans         &trans         &trans             &trans         &trans         &trans
