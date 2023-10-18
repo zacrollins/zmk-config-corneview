@@ -76,7 +76,7 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        hml: homerow_mods_r {
+        hmr: homerow_mods_r {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_R";
             flavor = "balanced";
