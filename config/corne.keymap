@@ -19,20 +19,20 @@
 #define FUNC    4
 
 /* MACROS */
-#define SWIN LG(GRAVE)          //Switch Window
-#define SPCP LA(COMMA)           //Space Previous
-#define SPCN LA(DOT)            //Space Next
-#define SCRN LG(LS(LC(N4)))     //Screen Shot (clipboard)
-#define SCR2 LG(LS(N4))         //Screen Shot (save)
-#define ZMIN LG(EQUAL)          //Zoom in
-#define ZOUT LG(MINUS)          //Zoom out
-#define TABN LS(LG(RBKT))       //Tab next
-#define TABP LS(LG(LBKT))       //Tab previous
-#define BACK LG(LBKT)           //Back
-#define FWD LG(RBKT)            //Forward
-#define VSCC LG(BSLH)           //Comment vs code
-#define MUTE LG(LS(M))          //Mute
-
+#define SWIN    LG(GRAVE)          //Switch Window
+#define SPCP    LA(COMMA)          //Space Previous
+#define SPCN    LA(DOT)            //Space Next
+#define SCRN    LG(LS(LC(N4)))     //Screen Shot (clipboard)
+#define SCR2    LG(LS(N4))         //Screen Shot (save)
+#define ZMIN    LG(EQUAL)          //Zoom in
+#define ZOUT    LG(MINUS)          //Zoom out
+#define TABN    LS(LG(RBKT))       //Tab next
+#define TABP    LS(LG(LBKT))       //Tab previous
+#define BACK    LG(LBKT)           //Back
+#define FWD     LG(RBKT)           //Forward
+#define VSCC    LG(BSLH)           //Comment vs code
+#define MUTE    LG(LS(M))          //Mute
+#define HYPER   LC(LA(LGUI))       //Hyper
 
 /* Global settings */
 
@@ -115,7 +115,7 @@
     &kp TAB        &kp Q        &kp W         &kp E         &kp R           &kp T       &kp Y   &kp U           &kp I           &kp O           &kp P           &bs_del
     &mt LCTRL ESC  &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SEMI  &kp SQT
     &kp LSHFT      &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RET
-                                            &mt LCTRL ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &kp RSHFT
+                                            &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &kp RSHFT
             >;
         };
 
