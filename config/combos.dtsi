@@ -33,31 +33,31 @@ combos {
 
     /* Horizontal combos - left hand */
 
-    COMBO(esc, COMBO_TERM_FAST, 1 2, &kp ESC, DEF)
-    COMBO(ret, COMBO_TERM_FAST, 2 3, &kp RETURN, DEF)
-    COMBO(tab, COMBO_TERM_FAST, 14 15, HRC_TAB, DEF)
+    COMBO(esc,   COMBO_TERM_FAST, 1 2,   &kp ESC,    DEF)
+    COMBO(ret,   COMBO_TERM_FAST, 2 3,   &kp RETURN, DEF)
+    COMBO(tab,   COMBO_TERM_FAST, 14 15, HRC_TAB,    DEF)
 
-    COMBO(cut, COMBO_TERM_FAST, 26 28, &kp LG(X), DEF)
-    COMBO(copy, COMBO_TERM_FAST, 26 27, &kp LG(C), DEF)
-    COMBO(paste, COMBO_TERM_FAST, 27 28, &kp LG(V), DEF)
+    COMBO(cut,   COMBO_TERM_FAST, 26 28, &kp LG(X),  DEF)
+    COMBO(copy,  COMBO_TERM_FAST, 26 27, &kp LG(C),  DEF)
+    COMBO(paste, COMBO_TERM_FAST, 27 28, &kp LG(V),  DEF)
 
     /* Horizontal combos - right hand */
 
-    COMBO(bspc, COMBO_TERM_FAST, 9 10, &kp BSPC, DEF)
-    COMBO(del, COMBO_TERM_FAST, 10 11, &kp DEL, DEF)
+    COMBO(bspc,  COMBO_TERM_FAST, 9 10,  &kp BSPC,   DEF)
+    COMBO(del,   COMBO_TERM_FAST, 10 11, &kp DEL,    DEF)
 
     /* vertical combos left hand */
 
-    COMBO(bang, COMBO_TERM_SLOW, 1 13, &kp EXCL, DEF)
-    COMBO(at, COMBO_TERM_SLOW, 2 14, &kp AT, DEF)
-    COMBO(hash, COMBO_TERM_SLOW, 3 15, &kp HASH, DEF)
-    COMBO(dllr, COMBO_TERM_SLOW, 4 16, &kp DLLR, DEF)
-    COMBO(prcnt, COMBO_TERM_SLOW, 5 17, &kp PRCNT, DEF)
+    COMBO(bang,  COMBO_TERM_SLOW, 1 13,  &kp EXCL,   DEF)
+    COMBO(at,    COMBO_TERM_SLOW, 2 14,  &kp AT,     DEF)
+    COMBO(hash,  COMBO_TERM_SLOW, 3 15,  &kp HASH,   DEF)
+    COMBO(dllr,  COMBO_TERM_SLOW, 4 16,  &kp DLLR,   DEF)
+    COMBO(prcnt, COMBO_TERM_SLOW, 5 17,  &kp PRCNT,  DEF)
 
     /* vertical combos right hand */
 
-    COMBO(caret, COMBO_TERM_SLOW, 6  18, &kp CARET, DEF)
-    COMBO(amps, COMBO_TERM_SLOW, 7 19, &kp AMPS, DEF)
-    COMBO(star, COMBO_TERM_SLOW, 8 20, &kp STAR, DEF)
+    COMBO(caret, COMBO_TERM_SLOW, 6 18,  &kp CARET,  DEF)
+    COMBO(amps,  COMBO_TERM_SLOW, 7 19,  &kp AMPS,   DEF)
+    COMBO(star,  COMBO_TERM_SLOW, 8 20,  &kp STAR,   DEF)
 
-}
+};

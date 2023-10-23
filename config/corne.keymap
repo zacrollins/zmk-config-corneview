@@ -59,7 +59,7 @@
 / {
 
     /* include combos file */
-    #include "combos.dtsi";
+    #include "combos.dtsi"
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
