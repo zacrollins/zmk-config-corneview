@@ -180,7 +180,7 @@
             label = "NAV";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    │      │ QUIT | CLOSE│      │      │  ESC │    │ TABP │ TABN │ SPCP │ SPCN │      │      │
+//    │      │ QUIT | CLOSE│      │      │  ESC │    │ TABP │ TABN │ SPCP │ SPCN │      │BS_DEL│
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
 //    │      │SEL_ALL| SAVE│      │      │ FIND │    │ LEFT │ DOWN │  UP  │ RIGHT│      │      |
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
@@ -188,7 +188,7 @@
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    | BACK │ FWD  │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    ___            &kp RG(Q)      &kp RG(W)      ___            ___            &kp ESC            &kp TABP       &kp TABN       &kp SPCP       &kp SPCN       ___            ___
+    ___            &kp RG(Q)      &kp RG(W)      ___            ___            &kp ESC            &kp TABP       &kp TABN       &kp SPCP       &kp SPCN       ___            &bs_del
     ___            &kp RG(A)      &kp RG(S)      ___            &kp RG(F)      ___                &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___            ___
     ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      ___                &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp VSCC       ___
                                                 ___            ___            ___                &kp BACK       &kp FWD        ___
