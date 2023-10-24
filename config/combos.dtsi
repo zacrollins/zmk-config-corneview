@@ -35,7 +35,6 @@ combos {
 
     COMBO(esc,   COMBO_TERM_FAST, 1 2,   &kp ESC,    DEF)
     COMBO(ret,   COMBO_TERM_FAST, 2 3,   &kp RETURN, DEF)
-    COMBO(tab,   COMBO_TERM_FAST, 14 15, HRC_TAB,    DEF)
 
     COMBO(cut,   COMBO_TERM_FAST, 26 28, &kp LG(X),  DEF)
     COMBO(copy,  COMBO_TERM_FAST, 26 27, &kp LG(C),  DEF)
