@@ -107,7 +107,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L KEYS_THUMBS>;
             hold-trigger-on-release;
-        }
+        };
 
         hmr_rpar: hmr_combo_rpar {
             compatible = "zmk,behavior-hold-tap";
@@ -119,7 +119,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L KEYS_THUMBS>;
             hold-trigger-on-release;
-        }
+        };
 
         bs_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
