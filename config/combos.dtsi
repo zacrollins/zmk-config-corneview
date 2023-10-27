@@ -17,7 +17,9 @@
 #define COMBO_TERM_SLOW     30
 
 /* Home Row Mod combo tap only */
-#define HRC_TAB    &hml         LA(LCTRL) TAB
+#define HRC_TAB    &hml         LC(LGUI) TAB
+#define HRC_LPAR   &hmr_lpar    RS(RGUI) 0
+#define HRC_RPAR   &hmr_rpar    RC(RGUI) 0
 
 #define COMBO(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
     combo_##NAME { \
@@ -36,14 +38,20 @@ combos {
     COMBO(esc,   COMBO_TERM_FAST, 1 2,   &kp ESC,    DEF)
     COMBO(ret,   COMBO_TERM_FAST, 2 3,   &kp RETURN, DEF)
 
+    COMBO(tab,   COMBO_TERM_FAST, 14 15, HRC_TAB,    DEF NAV NUM)
+
     COMBO(cut,   COMBO_TERM_FAST, 26 28, &kp LG(X),  DEF)
     COMBO(copy,  COMBO_TERM_FAST, 26 27, &kp LG(C),  DEF)
     COMBO(paste, COMBO_TERM_FAST, 27 28, &kp LG(V),  DEF)
 
     /* Horizontal combos - right hand */
 
+    COMBO(ent,   COMBO_TERM_FAST, 8 9,   &kp RETURN, DEF)
     COMBO(bspc,  COMBO_TERM_FAST, 9 10,  &kp BSPC,   DEF)
     COMBO(del,   COMBO_TERM_FAST, 10 11, &kp DEL,    DEF)
+
+    COMBO(lpar,  COMBO_TERM_FAST, 19 20, HRC_LPAR,   DEF NAV NUM)
+    COMBO(rpar,  COMBO_TERM_FAST, 20 21, HRC_RPAR,   DEF NAV NUM)
 
     /* vertical combos left hand */
 

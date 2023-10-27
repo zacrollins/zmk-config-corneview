@@ -97,6 +97,30 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
+        hmr_lpar: hmr_combo_lpar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_COMBO_LPAR";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L KEYS_THUMBS>;
+            hold-trigger-on-release;
+        }
+
+        hmr_rpar: hmr_combo_rpar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_COMBO_RPAR";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L KEYS_THUMBS>;
+            hold-trigger-on-release;
+        }
+
         bs_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
@@ -125,14 +149,14 @@
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────┤    ├─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
 //    │  LCTRL ESC  │ &hml LALT A │ &hml CTRL S │ &hml LGUI D   │ &hml LSHFT F  │        G       │    │       H         │ &hmr RSHFT J   │ &hmr RGUI K  │ &hmr RCTRL L   │ &hmr RALT ;    │       '      │
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
-//    │    LSHFT    │      Z      │      X      │      C        │      V        │        B       │    │       N         │        M       │ &comma_morph │   &dot_morph   │        /       │     ENTER    │
+//    │    LSHFT    │      Z      │      X      │      C        │      V        │        B       │    │       N         │        M       │      ,       │       .        │        /       │     ENTER    │
 //    ╰─────────────┴─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────┴──────────────╯
-//                                              │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │     RSHFT    │
+//                                              │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │ &mt RSHFT SPACE│   CAPS_WORD  │
 //                                              ╰───────────────┴───────────────┴────────────────╯    ╰─────────────────┴────────────────┴──────────────╯
     &kp TAB        &kp Q        &kp W         &kp E         &kp R           &kp T       &kp Y   &kp U           &kp I           &kp O           &kp P           &bs_del
     &mt LCTRL ESC  &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SEMI  &kp SQT
     &kp LSHFT      &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RET
-                                            &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &kp RSHFT
+                                            &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &mt RSHFT SPACE  &caps_word
             >;
         };
 
@@ -142,16 +166,16 @@
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
 //    │ TAB  │   1  │  2   │   3  │   4  │  5   │    │   6  │  7   │   8  │   9  │   0  │BS_DEL│
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │      │    │      │   4  │   5  │   6  │   +  │      │
+//    │      │      │      │      │   -  │   (  │    │   )  │   4  │   5  │   6  │   +  │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │ LSHFT│      │      │      │      │      │    │   &  │   1  │   2  │   3  │   =  │      │
+//    │ LSHFT│      │      │      │   |  │   {  │    │   }  │   1  │   2  │   3  │   =  │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    |      │   0  │   .  │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
     &kp TAB        &kp N1         &kp N2         &kp N3         &kp N4         &kp N5             &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &bs_del
-    ___            ___            ___            ___            ___            ___                ___            &kp N4         &kp N5         &kp N6         &kp PLUS       ___
-    &kp LSHFT      ___            ___            ___            ___            ___                &kp AMPS       &kp N1         &kp N2         &kp N3         &kp EQUAL      ___
+    ___            ___            ___            ___            &kp MINUS      &kp LPAR           &kp RPAR       &kp N4         &kp N5         &kp N6         &kp PLUS       ___
+    &kp LSHFT      ___            ___            ___            &kp PIPE       &kp LBRC           &kp RBRC       &kp N1         &kp N2         &kp N3         &kp EQUAL      ___
                                                 ___            ___            ___                ___            &kp N0         &kp DOT
             >;
         };
@@ -190,7 +214,7 @@
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
     ___            &kp RG(Q)      &kp RG(W)      ___            ___            &kp ESC            &kp TABP       &kp TABN       &kp SPCP       &kp SPCN       ___            &bs_del
     ___            &kp RG(A)      &kp RG(S)      ___            &kp RG(F)      ___                &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___            ___
-    ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      ___                &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        &kp VSCC       ___
+    ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      ___                &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
                                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
