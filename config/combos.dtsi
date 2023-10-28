@@ -18,8 +18,8 @@
 
 /* Home Row Mod combo tap only */
 #define HRC_TAB    &hml         LC(LGUI) TAB
-#define HRC_LPAR   &hmr_lpar    RS(RGUI) 0
-#define HRC_RPAR   &hmr_rpar    RC(RGUI) 0
+#define HRC_LPAR   &hmr_lpar    RS(RGUI) LPAR
+#define HRC_RPAR   &hmr_rpar    RC(RGUI) RPAR
 
 #define COMBO(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
     combo_##NAME { \

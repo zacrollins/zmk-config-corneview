@@ -170,13 +170,13 @@
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
 //    │      │      │      │      │   -  │   (  │    │   )  │   4  │   5  │   6  │   +  │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │ LSHFT│      │      │      │   |  │   {  │    │   }  │   1  │   2  │   3  │   =  │      │
+//    │ LSHFT│      │      │      │   |  │   [  │    │   ]  │   1  │   2  │   3  │   =  │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    |      │   0  │   .  │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
     &kp TAB        &kp N1         &kp N2         &kp N3         &kp N4         &kp N5             &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &bs_del
-    ___            ___            ___            ___            &kp MINUS      &kp LPAR           &kp RPAR       &kp N4         &kp N5         &kp N6         &kp PLUS       ___
+    ___            ___            ___            ___            &kp MINUS      &kp LBKT           &kp RBKT       &kp N4         &kp N5         &kp N6         &kp PLUS       ___
     &kp LSHFT      ___            ___            ___            &kp PIPE       &kp LBRC           &kp RBRC       &kp N1         &kp N2         &kp N3         &kp EQUAL      ___
                                                 ___            ___            ___                ___            &kp N0         &kp DOT
             >;
@@ -208,14 +208,14 @@
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
 //    │      │ QUIT | CLOSE│ CMD+`│      │  ESC │    │ TABP │ TABN │ SPCP │ SPCN │      │BS_DEL│
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│      │    │ LEFT │ DOWN │  UP  │ RIGHT│      │      |
+//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│CMD+TAB│    │ LEFT │ DOWN │  UP  │ RIGHT│      │      |
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
 //    │      │ UNDO │ CUT  │ COPY │ PASTE│      │    │ HOME │ PGDN │ PGUP │  END │      │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    | BACK │ FWD  │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
     ___            &kp RG(Q)      &kp RG(W)      &kp LG(GRAVE)  ___            &kp ESC            &kp TABP       &kp TABN       &kp SPCP       &kp SPCN       ___            &bs_del
-    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___            ___
+    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp LG(TAB)        &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___            ___
     ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      ___                &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
                                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
