@@ -8,6 +8,31 @@
                 ╰────────────╯ ╰────────────╯
 */
 
+/*                COMBO POSITIONS
+    HORIZONTAL
+    1  -  2 : ESC
+    2  -  3 : ENTER
+    14 - 15 : TAB
+    26 - 28 : CUT
+    26 - 27 : COPY
+    27 - 28 : PASTE
+    8  -  9 : ENTER
+    9  - 10 : BACKSPACE
+    10 - 11 : DEL
+    19 - 20 : LEFT PAR
+    20 - 21 : RIGHT PAR
+
+    VERTICAL
+    1  - 13 : !
+    2  - 14 : @
+    3  - 15 : #
+    4  - 16 : $
+    5  - 17 : %
+    6  - 18 : ^
+    7  - 19 : &
+    8  - 20 : *
+*/
+
 
 // use require-prior-idle-ms for combos
 #undef COMBO_HOOK

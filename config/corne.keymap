@@ -2,7 +2,7 @@
 
     ╭────────────────────────╮ ╭────────────────────────╮
     │ 0   1   2   3   4   5  │ │ 6   7   8   9   10  11 │
-    │ 12  13  14  15  16  17 │ │ 18  19  19  20  22  23 │
+    │ 12  13  14  15  16  17 │ │ 18  19  20  21  22  23 │
     │ 24  25  26  27  28  29 │ │ 30  31  32  33  34  35 │
     ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
                 ╰────────────╯ ╰────────────╯
@@ -21,6 +21,7 @@
 #define SYM     2
 #define NAV     3
 #define FUNC    4
+#define MSE     5
 
 /* MACROS */
 #define SWIN    LG(GRAVE)          //Switch Window
@@ -138,6 +139,15 @@
             bindings = <&mo>, <&bs_del>;
             tapping-term-ms = <200>;
         };
+
+        // Swapper for smart alt+tab
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <29>;
+        };
     };
 
     keymap {
@@ -151,13 +161,13 @@
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────┤    ├─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
 //    │  LCTRL ESC  │ &hml LALT A │ &hml CTRL S │ &hml LGUI D   │ &hml LSHFT F  │        G       │    │       H         │ &hmr RSHFT J   │ &hmr RGUI K  │ &hmr RCTRL L   │ &hmr RALT ;    │       '      │
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
-//    │    LSHFT    │      Z      │      X      │      C        │      V        │        B       │    │       N         │        M       │      ,       │       .        │        /       │     ENTER    │
+//    │    LSHFT    │      Z      │      X      │      C        │      V        │   &lt MSE B    │    │       N         │        M       │      ,       │       .        │        /       │     ENTER    │
 //    ╰─────────────┴─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────┴──────────────╯
 //                                              │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │   CAPS_WORD  │
 //                                              ╰───────────────┴───────────────┴────────────────╯    ╰─────────────────┴────────────────┴──────────────╯
     &kp TAB        &kp Q        &kp W         &kp E         &kp R           &kp T       &kp Y   &kp U           &kp I           &kp O           &kp P           &bs_del
     &mt LCTRL ESC  &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SEMI  &kp SQT
-    &kp LSHFT      &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RET
+    &kp LSHFT      &kp Z        &kp X         &kp C         &kp V           &lt MSE B   &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RET
                                             &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &caps_word
             >;
         };
@@ -168,7 +178,7 @@
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
 //    │ TAB  │   1  │  2   │   3  │   4  │  5   │    │   6  │  7   │   8  │   9  │   0  │BS_DEL│
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │   -  │   (  │    │   )  │   4  │   5  │   6  │   +  │      │
+//    │      │      │      │      │   -  │   {  │    │   }  │   4  │   5  │   6  │   +  │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
 //    │ LSHFT│      │      │      │   |  │   [  │    │   ]  │   1  │   2  │   3  │   =  │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
@@ -208,15 +218,15 @@
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
 //    │      │ QUIT | CLOSE│ CMD+`│      │  ESC │    │ TABP │ TABN │ SPCP │ SPCN │      │BS_DEL│
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│CMD+TAB│    │ LEFT │ DOWN │  UP  │ RIGHT│      │      |
+//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│ SWAP │    │ LEFT │ DOWN │  UP  │ RIGHT│      │      |
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │ UNDO │ CUT  │ COPY │ PASTE│      │    │ HOME │ PGDN │ PGUP │  END │      │      │
+//    │      │ UNDO │ CUT  │ COPY │ PASTE│ BSWAP│    │ HOME │ PGDN │ PGUP │  END │      │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    | BACK │ FWD  │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
     ___            &kp RG(Q)      &kp RG(W)      &kp LG(GRAVE)  ___            &kp ESC            &kp TABP       &kp TABN       &kp SPCP       &kp SPCN       ___            &bs_del
-    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp LG(TAB)        &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___            ___
-    ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      ___                &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
+    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp &swapper       &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___            ___
+    ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp LS(TAB)        &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
                                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
@@ -238,6 +248,26 @@
     ___            ___            ___            ___            ___            ___                &kp C_MUTE     &kp C_VOL_DN   &kp C_VOL_UP   ___            &kp F11        ___
     ___            &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_CLR         ___            ___            ___            ___            &kp F12        ___
                                                 &sys_reset     &bootloader    ___                ___            &bootloader    &sys_reset
+            >;
+        };
+
+        mouse_layer {
+            label = "MSE";
+            bindings = <
+//    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
+//    │      │      │      │      │      │      │    │      │ MW_DN│ MW_UP│      │      │      │
+//    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+//    │      │      │      │      │      │      │    │ M_LFT│ M_DN │ M_UP │ M_RGT│      │      |
+//    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
+//    │      │      │      │      │      │      │    │      │      │      │      │      │      │
+//    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
+//                         |      │      |      |    | LCLK │ RCLK │      |
+//                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
+
+    ___            ___            ___            ___            ___            ___                ___            &mwh S_DOWN    &mwh S_UP      ___            ___            ___
+    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &mmv M_LEFT    &mmv M_DOWN    &mmv M_UP      &mmv M_RIGHT   ___            ___
+    ___            ___            ___            ___            ___            ___         ___            ___            ___            ___            ___            ___
+                                                ___            ___            ___                &mkp LCLK      &mkp RCLK      ___
             >;
         };
     };
