@@ -11,7 +11,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
+// #include <dt-bindings/zmk/mouse.h>
 
 #define XXX &none
 #define ___ &trans
@@ -22,7 +22,7 @@
 #define SYM     2
 #define NAV     3
 #define FUNC    4
-#define MSE     5
+// #define MSE     5
 
 /* MACROS */
 #define SWIN    LG(GRAVE)          //Switch Window
@@ -39,9 +39,6 @@
 #define VSCC    LG(BSLH)           //Comment vs code
 #define MUTE    LG(LS(M))          //Mute
 #define HYPER   LC(LA(LGUI))       //Hyper
-
-// include mouse_keys
-#include "mouse.dtsi"
 
 /* Global settings */
 
@@ -165,13 +162,13 @@
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────┤    ├─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
 //    │  LCTRL ESC  │ &hml LALT A │ &hml CTRL S │ &hml LGUI D   │ &hml LSHFT F  │        G       │    │       H         │ &hmr RSHFT J   │ &hmr RGUI K  │ &hmr RCTRL L   │ &hmr RALT ;    │       '      │
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
-//    │    LSHFT    │      Z      │      X      │      C        │      V        │   &lt MSE B    │    │       N         │        M       │      ,       │       .        │        /       │     ENTER    │
+//    │    LSHFT    │      Z      │      X      │      C        │      V        │        B       │    │       N         │        M       │      ,       │       .        │        /       │     ENTER    │
 //    ╰─────────────┴─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────┴──────────────╯
 //                                              │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │   CAPS_WORD  │
 //                                              ╰───────────────┴───────────────┴────────────────╯    ╰─────────────────┴────────────────┴──────────────╯
     &kp TAB        &kp Q        &kp W         &kp E         &kp R           &kp T       &kp Y   &kp U           &kp I           &kp O           &kp P           &bs_del
     &mt LCTRL ESC  &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SEMI  &kp SQT
-    &kp LSHFT      &kp Z        &kp X         &kp C         &kp V           &lt MSE B   &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RET
+    &kp LSHFT      &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RET
                                             &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &caps_word
             >;
         };
@@ -255,25 +252,25 @@
             >;
         };
 
-        mouse_layer {
-            label = "MSE";
-            bindings = <
-//    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    │      │      │      │      │      │      │    │      │ MW_DN│ MW_UP│      │      │      │
-//    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │      │    │ M_LFT│ M_DN │ M_UP │ M_RGT│      │      |
-//    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │      │    │      │      │      │      │      │      │
-//    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
-//                         |      │      |      |    | LCLK │ RCLK │      |
-//                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
+//         mouse_layer {
+//             label = "MSE";
+//             bindings = <
+// //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
+// //    │      │      │      │      │      │      │    │      │ MW_DN│ MW_UP│      │      │      │
+// //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+// //    │      │      │      │      │      │      │    │ M_LFT│ M_DN │ M_UP │ M_RGT│      │      |
+// //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
+// //    │      │      │      │      │      │      │    │      │      │      │      │      │      │
+// //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
+// //                         |      │      |      |    | LCLK │ RCLK │      |
+// //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    ___            ___            ___            ___            ___            ___                ___            &mwh S_DOWN    &mwh S_UP      ___            ___            ___
-    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &mmv M_LEFT    &mmv M_DOWN    &mmv M_UP      &mmv M_RIGHT   ___            ___
-    ___            ___            ___            ___            ___            ___         ___            ___            ___            ___            ___            ___
-                                                ___            ___            ___                &mkp LCLK      &mkp RCLK      ___
-            >;
-        };
+//     ___            ___            ___            ___            ___            ___                ___            &mwh S_DOWN    &mwh S_UP      ___            ___            ___
+//     ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &mmv M_LEFT    &mmv M_DOWN    &mmv M_UP      &mmv M_RIGHT   ___            ___
+//     ___            ___            ___            ___            ___            ___         ___            ___            ___            ___            ___            ___
+//                                                 ___            ___            ___                &mkp LCLK      &mkp RCLK      ___
+//             >;
+//         };
     };
 };
 
