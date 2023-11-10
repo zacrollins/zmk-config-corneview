@@ -39,6 +39,7 @@
 #define VSCC    LG(BSLH)           //Comment vs code
 #define MUTE    LG(LS(M))          //Mute
 #define HYPER   LC(LA(LGUI))       //Hyper
+#define MEH     LS(LC(LA))         //Meh
 
 /* Global settings */
 
@@ -166,7 +167,7 @@
 //    ╰─────────────┴─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────┴──────────────╯
 //                                              │ &mt HYPER ESC │ &lt NAV RET   │  &lt NUM TAB   │    |  &lt_bspc SYM   │     SPACE      │   CAPS_WORD  │
 //                                              ╰───────────────┴───────────────┴────────────────╯    ╰─────────────────┴────────────────┴──────────────╯
-    &kp TAB        &kp Q        &kp W         &kp E         &kp R           &kp T       &kp Y   &kp U           &kp I           &kp O           &kp P           &bs_del
+    &kp TAB        &kp Q        &kp W         &hml MEH E    &kp R           &kp T       &kp Y   &kp U           &hmr MEH Imiryoku      &kp O           &kp P           &bs_del
     &mt LCTRL ESC  &hml LALT A  &hml LCTRL S  &hml LGUI D   &hml LSHFT F    &kp G       &kp H   &hmr RSHFT J    &hmr RGUI K     &hmr RCTRL L    &hmr RALT SEMI  &kp SQT
     &kp LSHFT      &kp Z        &kp X         &kp C         &kp V           &kp B       &kp N   &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp RET
                                             &mt HYPER ESC  &lt NAV RET   &lt NUM TAB        &lt_bspc SYM 0   &kp SPACE      &caps_word
