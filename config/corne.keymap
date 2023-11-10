@@ -25,21 +25,22 @@
 // #define MSE     5
 
 /* MACROS */
-#define SWIN    LG(GRAVE)          //Switch Window
-#define SPCP    LA(COMMA)          //Space Previous
-#define SPCN    LA(DOT)            //Space Next
-#define SCRN    LG(LS(LC(N4)))     //Screen Shot (clipboard)
-#define SCR2    LG(LS(N4))         //Screen Shot (save)
-#define ZMIN    LG(EQUAL)          //Zoom in
-#define ZOUT    LG(MINUS)          //Zoom out
-#define TABN    LS(LG(RBKT))       //Tab next
-#define TABP    LS(LG(LBKT))       //Tab previous
-#define BACK    LG(LBKT)           //Back
-#define FWD     LG(RBKT)           //Forward
-#define VSCC    LG(BSLH)           //Comment vs code
-#define MUTE    LG(LS(M))          //Mute
-#define HYPER   LC(LA(LGUI))       //Hyper
-#define MEH     LS(LC(LA))         //Meh
+#define YSPCP    LA(COMMA)          //Space Previous
+#define YSPCN    LA(DOT)            //Space Next
+#define MCN      LC(LA(RIGHT))      //Mission Control Next Space
+#define MCP      LC(LA(LEFT))       //Mission Control Previous Space
+#define SCRN     LG(LS(LC(N4)))     //Screen Shot (clipboard)
+#define SCR2     LG(LS(N4))         //Screen Shot (save)
+#define ZMIN     LG(EQUAL)          //Zoom in
+#define ZOUT     LG(MINUS)          //Zoom out
+#define TABN     LS(LG(RBKT))       //Tab next
+#define TABP     LS(LG(LBKT))       //Tab previous
+#define BACK     LG(LBKT)           //Back
+#define FWD      LG(RBKT)           //Forward
+#define VSCC     LG(BSLH)           //Comment vs code
+#define MUTE     LG(LS(M))          //Mute
+#define HYPER    LC(LA(LGUI))       //Hyper
+#define MEH      LS(LC(LA))         //Meh
 
 /* Global settings */
 
@@ -178,38 +179,39 @@
             label = "NUM";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    │ TAB  │   1  │  2   │   3  │   4  │  5   │    │   6  │  7   │   8  │   9  │   0  │BS_DEL│
+//    │      │      │      │      │      │      │    │   [  │   7  │   8  │   9  │   ]  │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │   -  │   {  │    │   }  │   4  │   5  │   6  │   +  │      │
+//    │      │ LALT │ LCTRL│ LGUI │ LSHFT│      │    │   +  │   4  │   5  │   6  │   :  │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │ LSHFT│      │      │      │   |  │   [  │    │   ]  │   1  │   2  │   3  │   =  │      │
+//    │      │      │      │      │      │      │    │   \  │   1  │   2  │   3  │   =  │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
-//                         │      │      │      │    |      │   0  │   .  │
+//                         │      │      │      │    |   -  │   0  │   ~  │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    &kp TAB        &kp N1         &kp N2         &kp N3         &kp N4         &kp N5             &kp N6         &kp N7         &kp N8         &kp N9         &kp N0         &bs_del
-    ___            ___            ___            ___            &kp MINUS      &kp LBKT           &kp RBKT       &kp N4         &kp N5         &kp N6         &kp PLUS       ___
-    &kp LSHFT      ___            ___            ___            &kp PIPE       &kp LBRC           &kp RBRC       &kp N1         &kp N2         &kp N3         &kp EQUAL      ___
-                                                ___            ___            ___                ___            &kp N0         &kp DOT
+    ___            ___            ___            ___            ___            ___                &kp LBKT       &kp N7         &kp N8         &kp N9         &kp RBKT       ___
+    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp SEMI       &kp N4         &kp N5         &kp N6         &kp SEMI       ___
+    ___            ___            ___            ___            ___            ___                &kp BSLH       &kp N1         &kp N2         &kp N3         &kp EQUAL      ___
+                                                ___            ___            ___                &kp MINUS      &kp N0         &kp DOT
             >;
+
         };
 
         sym_layer {
             label = "SYM";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    │   ~  │   !  │   @  │   #  │   $  │   %  │    │   ^  │   &  │   *  │   (  │   )  │BS_DEL│
+//    │      │   {  │   &  │   *  │   (  │   }  │    │      │      │      │      │      |      |
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │      │    │   -  │   =  │   [  │   ]  │   \  │   `  │
+//    │      │   ;  │   $  │   %  │   ^  │   =  │    │      │ RSHFT│ RGUI │ RCTRL│ RALT │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │      │      │      │    │   _  │   +  │   {  │   }  │   |  │   ~  │
+//    │      │   ~  │   !  │   @  │   #  │   |  │    │      │      │      │      │      │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
-//                         │      │      │      │    |      │      │      │
+//                         │   (  │   )  │   _  │    |      │      │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    &kp TILDE      &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT          &kp CARET      &kp AMPS       &kp KP_MULTIPLY &kp LPAR      &kp RPAR       &bs_del
-    ___            ___            ___            ___            ___            ___                &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &kp BSLH       &kp GRAVE
-    ___            ___            ___            ___            ___            ___                &kp UNDER      &kp PLUS       &kp LBRC       &kp RBRC       &kp PIPE       &kp TILDE
+    ___            &kp LBRC       &kp AMPS       &kp STAR       &kp LPAR       &kp RBRC           ___            ___            ___            ___            ___            ___
+    ___            &kp SEMI       &kp DOLLAR     &kp PRCNT      &kp CARET      &kp EQUAL          ___            &kp RSHFT      &kp RGUI       &kp RCTRL      &kp RALT       ___
+    ___            &kp TILDE      &kp EXCL       &kp AT         &kp HASH       &kp PIPE           ___            ___            ___            ___            ___            ___
                                                 ___            ___            ___                ___            ___            ___
             >;
         };
@@ -218,17 +220,17 @@
             label = "NAV";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    │      │ QUIT | CLOSE│ CMD+`│      │  ESC │    │ TABP │ TABN │ SPCP │ SPCN │      │BS_DEL│
+//    │      │ QUIT | CLOSE│ CMD+`│      │  ESC │    │ TABP │ TABN │ YSPCP│ YSPCN│ MCN  │BS_DEL│
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│ SWAP │    │ LEFT │ DOWN │  UP  │ RIGHT│      │      |
+//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│ SCRN │    │ LEFT │ DOWN │  UP  │ RIGHT│ MCP  │      |
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │ UNDO │ CUT  │ COPY │ PASTE│ BSWAP│    │ HOME │ PGDN │ PGUP │  END │      │      │
+//    │      │ UNDO │ CUT  │ COPY │ PASTE│ SCR2 |    │ HOME │ PGDN │ PGUP │  END │      │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    | BACK │ FWD  │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    ___            &kp RG(Q)      &kp RG(W)      &kp LG(GRAVE)  ___            &kp ESC            &kp TABP       &kp TABN       &kp SPCP       &kp SPCN       ___            &bs_del
-    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp &swapper       &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      ___            ___
-    ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp LS(TAB)        &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
+    ___            &kp RG(Q)      &kp RG(W)      &kp LG(GRAVE)  ___            &kp ESC            &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN        &bs_del
+    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp SCRN           &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP        ___
+    ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCR2           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
                                                 ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
