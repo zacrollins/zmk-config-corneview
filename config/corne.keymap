@@ -39,7 +39,7 @@
 #define VSCC    LG(BSLH)           //Comment vs code
 #define MUTE    LG(LS(M))          //Mute
 #define HYPER   LC(LA(LGUI))       //Hyper
-#define MEH     LS(LC(LA))         //Meh
+#define MEH     LS(LC(LALT))       //Meh
 
 /* Global settings */
 
