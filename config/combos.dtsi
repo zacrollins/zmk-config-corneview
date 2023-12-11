@@ -21,6 +21,10 @@
     10 - 11 : DEL
     19 - 20 : LEFT PAR
     20 - 21 : RIGHT PAR
+    31 - 32 : LEFT SQUARE BRACKET
+    32 - 33 : RIGHT SQUARE BRACKET
+
+    25 - 26 : Function layer Momentary Layer
 
     VERTICAL
     1  - 13 : !
@@ -31,6 +35,9 @@
     6  - 18 : ^
     7  - 19 : &
     8  - 20 : *
+
+    18 - 30 : _
+    19 - 31 : -
 */
 
 
@@ -69,6 +76,8 @@ combos {
     COMBO(copy,  COMBO_TERM_FAST, 26 27, &kp LG(C),  DEF)
     COMBO(paste, COMBO_TERM_FAST, 27 28, &kp LG(V),  DEF)
 
+    COMBO(funcL, COMBO_TERM_SLOW, 25 26, &mo FUNC,   DEF)
+
     /* Horizontal combos - right hand */
 
     COMBO(ent,   COMBO_TERM_FAST, 8 9,   &kp RETURN, DEF)
@@ -77,6 +86,8 @@ combos {
 
     COMBO(lpar,  COMBO_TERM_FAST, 19 20, HRC_LPAR,   DEF NAV NUM)
     COMBO(rpar,  COMBO_TERM_FAST, 20 21, HRC_RPAR,   DEF NAV NUM)
+    COMBO(lbkt,  COMBO_TERM_FAST, 31 32, &kp LBKT,   DEF NAV NUM)
+    COMBO(rbkt,  COMBO_TERM_FAST, 32 33, &kp RBKT,   DEF NAV NUM)
 
     /* vertical combos left hand */
 
@@ -91,5 +102,7 @@ combos {
     COMBO(caret, COMBO_TERM_SLOW, 6 18,  &kp CARET,  DEF)
     COMBO(amps,  COMBO_TERM_SLOW, 7 19,  &kp AMPS,   DEF)
     COMBO(star,  COMBO_TERM_SLOW, 8 20,  &kp STAR,   DEF)
+    COMBO(under, COMBO_TERM_SLOW, 18 30, &kp UNDER,  DEF)
+    COMBO(minus, COMBO_TERM_SLOW, 19 31, &kp MINUS,  DEF)
 
 };
