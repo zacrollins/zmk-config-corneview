@@ -29,7 +29,7 @@
 #define YSPCN    LA(DOT)            //Space Next
 #define MCN      LC(LA(RIGHT))      //Mission Control Next Space
 #define MCP      LC(LA(LEFT))       //Mission Control Previous Space
-#define SCRN     LG(LS(xN4))        //Screen Shot (save)
+#define SCRN     LG(LS(N4))        //Screen Shot (save)
 #define TABN     LS(LG(RBKT))       //Tab next
 #define TABP     LS(LG(LBKT))       //Tab previous
 #define BACK     LG(LBKT)           //Back
@@ -215,10 +215,10 @@
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    | BACK │ FWD  │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    ___            &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN        &bs_del
-    ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP        ___
-    ___            &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
-                                                ___            ___            ___                &kp BACK       &kp FWD        ___
+    ___     &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP       &kp TABN       &kp YSPCP      &kp YSPCN      &kp MCN        &bs_del
+    ___     &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp MCP        ___
+    ___     &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME       &kp PG_DN      &kp PG_UP      &kp END        ___            ___
+                                            ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
 
