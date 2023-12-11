@@ -61,15 +61,6 @@
     /* include combos file */
     #include "combos.dtsi"
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        // Define FUN layer as tri-state
-        tri_layer {
-            if-layers = <NUM SYM>;
-            then-layer = <FUNC>;
-        };
-    };
-
     behaviors {
         hml: homerow_mods_l {
             compatible = "zmk,behavior-hold-tap";
