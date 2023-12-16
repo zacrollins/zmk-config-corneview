@@ -1,0 +1,21 @@
+// none and trans
+#define XXX &none
+#define ___ &trans
+
+// Navigation
+#define YSPCP    LA(COMMA)          //Yabai Space Previous
+#define YSPCN    LA(DOT)            //Yabai Space Next
+#define MCN      LC(LA(RIGHT))      //Mission Control Next Space
+#define MCP      LC(LA(LEFT))       //Mission Control Previous Space
+#define TABN     LS(LG(RBKT))       //Tab next
+#define TABP     LS(LG(LBKT))       //Tab previous
+#define BACK     LG(LBKT)           //Back
+#define FWD      LG(RBKT)           //Forward
+
+// Shortcuts
+#define SCRN     LG(LS(N4))        //Screen Shot (save)
+#define MUTE     LG(LS(M))          //Mute
+
+// HYPER and MEH
+#define HYPER    LC(LA(LGUI))       //Hyper
+#define MEH      LS(LC(LALT))       //Meh
