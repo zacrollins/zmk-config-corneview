@@ -110,7 +110,7 @@
             quick-tap-ms = <220>;
             bindings = <&masked_home>, <&kp>;
             hold-trigger-key-positions = <0>;
-        }
+        };
 
         mt_end: mt_end {
             compatible = "zmk,behavior-hold-tap";
