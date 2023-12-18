@@ -1,12 +1,6 @@
 
 #define QUICK_TAP_MS 175
 
-// Mod Tap Settings
-
-&mt {
-    tapping-term-ms = <150>;
-};
-
 // Layer Tap Settings
 
 &lt {  // layer-tap config

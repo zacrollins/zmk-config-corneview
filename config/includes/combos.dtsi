@@ -25,8 +25,6 @@
     31 - 32 : {
     32 - 33 : }
 
-    25 - 26 : Function layer Momentary Layer
-
     VERTICAL
     1  - 13 : !
     2  - 14 : @
@@ -75,8 +73,6 @@
         COMBO(cut,   COMBO_TERM_FAST, 26 28, &kp LG(X),  DEF)
         COMBO(copy,  COMBO_TERM_FAST, 26 27, &kp LG(C),  DEF)
         COMBO(paste, COMBO_TERM_FAST, 27 28, &kp LG(V),  DEF)
-
-        COMBO(funcL, COMBO_TERM_SLOW, 25 26, &mo FUNC,   DEF)
 
         /* Horizontal combos - right hand */
 

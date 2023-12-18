@@ -76,5 +76,51 @@
             bindings = <&mo>, <&bs_del>;
             tapping-term-ms = <200>;
         };
+
+        lt_caps_word: lt_caps_word {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_CAPS_WORD";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&caps_word>;
+            tapping-term-ms = <200>;
+        };
+
+        masked_home: masked_home {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MASKED_HOME";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp HOME>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        masked_end: masked_end {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MASKED_END";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&kp END>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mt_home: mt_home {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_HOME";
+            flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            bindings = <&masked_home>, <&kp>;
+            hold-trigger-key-positions = <0>;
+        }
+
+        mt_home: mt_end {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_END";
+            flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            bindings = <&masked_end>, <&kp>;
+            hold-trigger-key-positions = <0>;
+        }
     };
 };
