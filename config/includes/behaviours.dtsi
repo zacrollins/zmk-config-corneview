@@ -112,7 +112,7 @@
             hold-trigger-key-positions = <0>;
         }
 
-        mt_home: mt_end {
+        mt_end: mt_end {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_END";
             flavor = "tap-preferred";
