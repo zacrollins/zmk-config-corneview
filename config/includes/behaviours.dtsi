@@ -121,6 +121,6 @@
             quick-tap-ms = <220>;
             bindings = <&masked_end>, <&kp>;
             hold-trigger-key-positions = <0>;
-        }
+        };
     };
 };
