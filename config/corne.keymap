@@ -28,13 +28,6 @@
 #include "includes/combos.dtsi"
 #include "includes/behaviours.dtsi"
 
-// #define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
-// #define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
-// #define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
-// #define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
-// #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
-// #define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
-
 / {
 
     keymap {
@@ -46,7 +39,7 @@
 //    ╭─────────────┬─────────────┬─────────────┬───────────────┬───────────────┬────────────────╮    ╭─────────────────┬────────────────┬──────────────┬────────────────┬────────────────┬──────────────╮
 //    │     TAB     │      Q      │      W      │   E [HYPER]   │      R        │        T       │    │       Y         │      U         │   I [HYPER]  │        O       │        P       │    BS_DEL    │
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────┤    ├─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
-//    │ ESC [LCTRL] │  A [LALT]   │  S [LCTRL]  │   D [LGUI]    │   F [LSHFT]   │        G       │    │       H         │    J [RSHFT]   │   K [LGUI]   │   L [RCTRL]    │   ; [RALT]     │       '      │
+//    │ ESC [LCTRL] │  A [LALT]   │  S [LCTRL]  │   D [LGUI]    │   F [LSHFT]   │        G       │    │       H         │    J [RSHFT]   │   K [RGUI]   │   L [RCTRL]    │   ; [RALT]     │       '      │
 //    ├─────────────┼─────────────┼─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┼────────────────┼──────────────┤
 //    │    LSHFT    │      Z      │      X      │   C [MEH]     │      V        │        B       │    │       N         │        M       │    , [MEH]   │       .        │        /       │     ENTER    │
 //    ╰─────────────┴─────────────┴─────────────┼───────────────┼───────────────┼────────────────|    |─────────────────┼────────────────┼──────────────┼────────────────┴────────────────┴──────────────╯
@@ -67,14 +60,14 @@
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
 //    │      │ LALT │ LCTRL│ LGUI │ LSHFT│      │    │   +  │   4  │   5  │   6  │   :  │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │      │      │ MEH  │      │      │    │   \  │   1  │   2  │   3  │   =  │      │
+//    │      │      │      │ MEH  │      │      │    │   =  │   1  │   2  │   3  │   \  │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    |   -  │   0  │   .  │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
     ___            ___            ___            &kp HYPER      ___            ___                &kp LBKT       &kp N7         &kp N8         &kp N9         &kp RBKT       ___
     ___            &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      ___                &kp SEMI       &kp N4         &kp N5         &kp N6         &kp COLON      ___
-    ___            ___            ___            &kp MEH        ___            ___                &kp BSLH       &kp N1         &kp N2         &kp N3         &kp EQUAL      ___
+    ___            ___            ___            &kp MEH        ___            ___                &kp EQUAL      &kp N1         &kp N2         &kp N3         &kp BSLH       ___
                                                 ___            ___            ___                &kp MINUS      &kp N0         &kp DOT
             >;
 
@@ -104,18 +97,18 @@
             label = "NAV";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    │      │ QUIT | CLOSE│      │      │      │    │ TABP │ TABN │ YSPCP│ YSPCN│ MCN  │BS_DEL│
+//    │      │ QUIT | CLOSE│      │      │      │    │ TABP │ TABN │      │      │      │BS_DEL│
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│ DEL  │    │ LEFT │ DOWN │  UP  │ RIGHT│ MCP  │      |
+//    │      │ LOPT | LCTRL│ LCMD │ LSHFT│ SCRNC│    │ LEFT │ DOWN │  UP  │ RIGHT│      │      |
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
 //    │      │ UNDO │ CUT  │ COPY │ PASTE│ SCRN |    │ HOME │ PGDN │ PGUP │  END │      │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    | BACK │ FWD  │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
-    ___     &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP         &kp TABN       &kp YSPCP      &kp YSPCN         &kp MCN        &bs_del
-    ___     &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp DEL            &mt_home 0 LEFT  &kp DOWN       &kp UP         &mt_end 0 RIGHT  &kp MCP        ___
-    ___     &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME         &kp PG_DN      &kp PG_UP      &kp END           ___            ___
-                                            ___            ___            ___                &kp BACK       &kp FWD        ___
+    ___     &kp RG(Q)      &kp RG(W)      ___            ___            ___                &kp TABP         &kp TABN       ___            ___              ___            &bs_del
+    ___     &kp LALT       &kp LCTRL      &kp LGUI       &kp LSHFT      &kp SCRNC          &mt_home 0 LEFT  &kp DOWN       &kp UP         &mt_end 0 RIGHT  ___            ___
+    ___     &kp RG(Z)      &kp RG(X)      &kp RG(C)      &kp RG(V)      &kp SCRN           &kp HOME         &kp PG_DN      &kp PG_UP      &kp END          ___            ___
+                                        ___            ___            ___                &kp BACK       &kp FWD        ___
             >;
         };
 
@@ -123,18 +116,18 @@
             label = "FUNC";
             bindings = <
 //    ╭──────┬──────┬──────┬──────┬──────┬──────╮    ╭──────┬──────┬──────┬──────┬──────┬──────╮
-//    │      │  F10 │  F7  │  F8  │  F9  │ Vol+ │    │BT CLR│ BT 0 │ BT 1 │ BT 2 │ BT 3 │      │
+//    │      │ reset| bootl|      │      │      │    │      │  F7  │  F8  │  F9  │  F10 │      │
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │  F11 │  F4  │  F5  │  F6  │ MUTE │    │      │ RSHFT│ RGUI │ RCTRL│ RALT │      |
+//    │      │ BT 0 │ BT 1 │ BT 2 │ BT 3 │BT CLR│    │      │  F4  │  F5  │  F6  │  F11 │      |
 //    ├──────┼──────┼──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┼──────┼──────┤
-//    │      │  F12 │  F1  │  F2  │  F3  │ Vol- │    │      │      │      │      │      │      │
+//    │      │      │      │      │      │      │    │      │  F1  │  F2  │  F3  │  F12 │      │
 //    ╰──────┴──────┴──────┼──────┼──────┼──────|    |──────┼──────┼──────┼──────┴──────┴──────╯
 //                         │      │      │      │    |      |      │      │
 //                         ╰──────┴──────┴──────╯    ╰──────┴──────┴──────╯
 
-    ___            &kp F10    &kp F7    &kp F8    &kp F9    &kp C_VOL_UP        &bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   ___
-    ___            &kp F11    &kp F4    &kp F5    &kp F6    &kp C_MUTE          ___            &kp RSHFT    &kp RGUI     &kp RCTRL    &kp RALT       ___
-    ___            &kp F12    &kp F1    &kp F2    &kp F3    &kp C_VOL_DN        ___            ___          ___          ___          ___            ___
+    ___     &sys_reset    &bootloader   ___           ___            ___         ___   &kp F7   &kp F8   &kp F9   &kp F10   ___
+    ___     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR  ___   &kp F4   &kp F5   &kp F6   &kp F11   ___
+    ___     ___           ---           ___           ___            ___         ___   &kp F1   &kp F2   &kp F3   &kp F12   ___
                                                     ___     ___     ___          ___     ___     ___
             >;
         };
